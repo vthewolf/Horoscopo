@@ -1,8 +1,4 @@
 <resources>
-    <string name="app_name">Horóscopo</string>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <!--    Bottom Bar-->
     <string name="horoscope">Horoscope</string>
     <string name="palmistry">Palmistry</string>
