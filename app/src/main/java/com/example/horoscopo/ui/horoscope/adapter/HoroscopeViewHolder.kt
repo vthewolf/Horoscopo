@@ -20,7 +20,6 @@ class HoroscopeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                 startAnimation(
                     binding.imageHoroscope,
                     newLambda = { onItemSelected(horoscopeInfo) })
-//                onItemSelected(horoscopeInfo)
             }
         }
     }
