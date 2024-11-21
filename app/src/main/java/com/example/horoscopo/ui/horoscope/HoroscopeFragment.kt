@@ -25,6 +25,14 @@ class HoroscopeFragment : Fragment() {
     private var _binding: FragmentHoroscopeBinding? = null
     private val binding get() = _binding!!
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentHoroscopeBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -37,7 +45,7 @@ class HoroscopeFragment : Fragment() {
     }
 
     private fun initList() {
-        horoscopeAdapter = HoroscopeAdapter(onItemSelected =  {
+        horoscopeAdapter = HoroscopeAdapter(onItemSelected = {
             Toast.makeText(context, getString(it.name), Toast.LENGTH_LONG).show()
         })
 
@@ -55,13 +63,5 @@ class HoroscopeFragment : Fragment() {
                 }
             }
         }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentHoroscopeBinding.inflate(layoutInflater, container, false)
-        return binding.root
     }
 }
